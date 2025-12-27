@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Психолог по семейным делам</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; font-family: 'Nunito', sans-serif; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #e9d5ff; /* пастельный фиолетовый */
+    color: #2e1065;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow:
+        0 0 60px rgba(168, 85, 247, 0.35),
+        0 30px 80px rgba(88, 28, 135, 0.25);
+}
+
+h1 { text-align: center; font-size: 42px; margin-bottom: 10px; }
+.subtitle { text-align: center; font-size: 19px; color:#4c1d95; margin-bottom: 35px; }
+.intro { text-align: center; font-size:17px; line-height:1.9; max-width:900px; margin:auto; }
+
+.menu { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px; margin-top:50px; }
+.menu-item {
+    background: linear-gradient(145deg, #ddd6fe, #c4b5fd);
+    padding:35px 25px;
+    border-radius:24px;
+    text-align:center;
+    font-size:19px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+.menu-item span { display:block; font-size:15px; font-weight:400; margin-top:10px; }
+.menu-item:hover { transform:translateY(-7px); box-shadow:0 30px 55px rgba(0,0,0,0.18); }
+
+.section { display:none; margin-top:50px; animation:fade 0.6s ease; }
+@keyframes fade { from {opacity:0; transform: translateY(20px);} to {opacity:1;} }
+.section h2 { color:#4c1d95; font-size:32px; margin-bottom:15px; }
+.section p { font-size:16px; line-height:1.9; margin-bottom:20px; }
+.advice { background:#f3e8ff; padding:22px; border-radius:20px; margin-bottom:15px; line-height:1.7; }
+
+textarea,input { width:100%; padding:14px; border-radius:14px; border:1px solid #c4b5fd; margin-top:10px; font-size:15px; }
+button {
+    margin-top:15px; padding:14px 25px; border:none; border-radius:16px;
+    background:#8b5cf6; color:white; font-size:16px; cursor:pointer;
+    box-shadow:0 0 25px rgba(139,92,246,0.6);
+}
+.comment { background:#f0fdf4; padding:16px; border-radius:14px; margin-top:10px; border-left:4px solid #34d399; }
+.back { margin-top:35px; display:inline-block; color:#4c1d95; cursor:pointer; }
+
+.contact-section { margin-top:50px; background: rgba(255,255,255,0.85); padding:35px; border-radius:24px; box-shadow:0 0 60px rgba(168,85,247,0.2); }
+
+.contact-section h2 { text-align:center; color:#4c1d95; font-size:32px; margin-bottom:20px; }
+.contact-section p { text-align:center; color:#2e1065; font-size:16px; }
+.contact-section form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:12px; }
+.contact-section input, .contact-section textarea { font-size:15px; }
+.contact-section button { font-size:16px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+
+<h1>Психолог по семейным делам</h1>
+<div class="subtitle">Пространство тишины, поддержки и внутреннего равновесия</div>
+
+<div class="intro">
+Здесь не нужно быть сильным. Здесь можно быть настоящим.  
+Этот сайт создан для людей, которые устали от напряжения и хотят вернуть спокойствие и ясность мыслей.  
+Читайте советы, делитесь переживаниями и учитесь заботиться о себе и близких.
+</div>
+
+<!-- Меню -->
+<div class="menu" id="menu">
+    <div class="menu-item" onclick="openSection('family')">
+        Семейные отношения
+        <span>Конфликты, доверие, близость</span>
+    </div>
+    <div class="menu-item" onclick="openSection('personal')">
+        Личное состояние
+        <span>Тревога, усталость, внутренний баланс</span>
+    </div>
+    <div class="menu-item" onclick="openSection('dialog')">
+        Диалог и понимание
+        <span>Спокойное общение и уважение</span>
+    </div>
+</div>
+
+<!-- Секции -->
+<div class="section" id="family">
+<h2>Семейные советы</h2>
+<div class="advice"><strong>Слушайте, чтобы понять:</strong> Не спешите отвечать сразу. Позвольте близкому человеку полностью высказаться, это укрепляет доверие.</div>
+<div class="advice"><strong>Любовь — это доверие:</strong> Контроль разрушает отношения. Учитесь отпускать и доверять партнёру.</div>
+<div class="advice"><strong>Совместные ритуалы:</strong> Завтрак, прогулки, маленькие совместные действия укрепляют чувство семьи.</div>
+<div class="advice"><strong>Пауза вместо ссоры:</strong> Если эмоции накаляются — лучше сделать паузу, чтобы потом обсудить спокойно.</div>
+<div class="advice"><strong>Честность и открытость:</strong> Делитесь не только событиями, но и чувствами. Это создаёт эмоциональную близость.</div>
+
+<h3>Поделитесь своей историей</h3>
+<input id="name-family" placeholder="Ваше имя">
+<textarea id="text-family" placeholder="Опишите ситуацию"></textarea>
+<button onclick="addComment('family')">Отправить</button>
+<div id="comments-family"></div>
+<div class="back" onclick="goBack()">← Назад</div>
+</div>
+
+<div class="section" id="personal">
+<h2>Личное состояние</h2>
+<div class="advice"><strong>Право на отдых:</strong> Не нужно быть всегда сильным. Позвольте себе паузу и заботу о себе.</div>
+<div class="advice"><strong>Управление тревогой:</strong> Ведите дневник чувств, делайте дыхательные упражнения и медитацию для расслабления.</div>
+<div class="advice"><strong>Сон и питание:</strong> Регулярный сон и здоровое питание напрямую влияют на настроение и уровень энергии.</div>
+<div class="advice"><strong>Хобби и творчество:</strong> Найдите занятие, которое приносит радость и помогает отвлечься от стрессов.</div>
+<div class="advice"><strong>Границы:</strong> Учитесь говорить "нет", чтобы не перегружаться чужими проблемами.</div>
+
+<h3>Напишите, что тревожит</h3>
+<input id="name-personal" placeholder="Ваше имя">
+<textarea id="text-personal"></textarea>
+<button onclick="addComment('personal')">Отправить</button>
+<div id="comments-personal"></div>
+<div class="back" onclick="goBack()">← Назад</div>
+</div>
+
+<div class="section" id="dialog">
+<h2>Диалог и понимание</h2>
+<div class="advice"><strong>Слушайте чувства, а не слова:</strong> Иногда слова могут скрывать истинные эмоции. Важно понять, что человек чувствует.</div>
+<div class="advice"><strong>Мягкое общение:</strong> Начинайте с “я чувствую”, а не “ты сделал”, это снижает конфликты.</div>
+<div class="advice"><strong>Общее решение:</strong> Вместе ищите компромиссы, вместо того чтобы настаивать на своём.</div>
+<div class="advice"><strong>Активное внимание:</strong> Показывайте, что слышите и понимаете собеседника, кивайте, задавайте уточняющие вопросы.</div>
+<div class="advice"><strong>Эмпатия:</strong> Ставьте себя на место другого человека — это развивает понимание и доверие.</div>
+
+<h3>Обсуждение и мысли</h3>
+<input id="name-dialog" placeholder="Ваше имя">
+<textarea id="text-dialog"></textarea>
+<button onclick="addComment('dialog')">Отправить</button>
+<div id="comments-dialog"></div>
+<div class="back" onclick="goBack()">← Назад</div>
+</div>
+
+</div> <!-- конец card -->
+
+<!-- Секция обратной связи -->
+<div class="contact-section">
+<h2>Написать мне</h2>
+<p>Стоимость сеанса: Кыргызстан — 1200 сом | Россия — 980 ₽</p>
+
+<form action="https://formspree.io/f/mnqvlvyg" method="POST">
+  <input type="text" name="name" placeholder="Ваше имя" required>
+  <input type="email" name="_replyto" placeholder="Ваш e-mail" required>
+  <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+  <input type="hidden" name="_subject" value="Сообщение с сайта психолога">
+  <input type="hidden" name="_cc" value="erzattologonov09@gmail.com">
+  <button type="submit">Отправить сообщение</button>
+</form>
+</div>
+
+</div> <!-- конец container -->
+
+<script>
+function openSection(id) {
+    document.getElementById('menu').style.display = 'none';
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    loadComments(id);
+}
+
+function goBack() {
+    document.getElementById('menu').style.display = 'grid';
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+}
+
+// Комментарии разделов
+function addComment(section) {
+    const name = document.getElementById('name-' + section).value;
+    const text = document.getElementById('text-' + section).value;
+    if (!name || !text) return;
+    const comments = JSON.parse(localStorage.getItem(section) || '[]');
+    comments.push({name, text});
+    localStorage.setItem(section, JSON.stringify(comments));
+    document.getElementById('name-' + section).value = '';
+    document.getElementById('text-' + section).value = '';
+    loadComments(section);
+}
+function loadComments(section) {
+    const box = document.getElementById('comments-' + section);
+    box.innerHTML = '';
+    const comments = JSON.parse(localStorage.getItem(section) || '[]');
+    comments.forEach(c => {
+        box.innerHTML += `<div class="comment"><strong>${c.name}:</strong><br>${c.text}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>
